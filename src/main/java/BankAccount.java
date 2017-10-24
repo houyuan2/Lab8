@@ -12,6 +12,10 @@ public class BankAccount {
     /*
      * You may want to use this to distinguish between different kinds of accounts.
      */
+    /**
+     * defines bankAccount.
+     *
+     */
     public enum BankAccountType {
         CHECKINGS,
         SAVINGS,
@@ -26,13 +30,45 @@ public class BankAccount {
     public double interestRate;
     private double interestEarned;
 
+    /**
+     *
+     * @param name the owner name
+     * @param accountCategory account type
+     */
     public BankAccount(final String name, final BankAccountType accountCategory) {
-        /*
-         * Implement this function
-         */
+        ownerName = name;
+        accountType = accountCategory;
     }
 
-    /*
+    /**
      * Implement getters and setters as appropriate for private variables.
      */
+    public int getaccountNumber() {
+        return accountNumber;
+    }
+
+    public double getaccountBalance() {
+        return accountBalance;
+    }
+
+    public  String getownerName() {
+        return ownerName;
+    }
+
+    public double setinterestEarned() {
+        return interestEarned;
+    }
+
+    public void setaccountNumber(int a) {
+        accountNumber = a;
+    }
+
+    public void setaccountBalance(double a) {
+        accountBalance = a;
+    }
+
+    public  void setownerName(String n) {
+        ownerName = n;
+    }
+
 }
